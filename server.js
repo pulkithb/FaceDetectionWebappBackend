@@ -39,7 +39,7 @@ app.post('/imageurl',(req,res)=>{image.handleApiCall(req,res )});
 // Load hash from your password DB.
 /**/
 
-app.listen(3001,()=>{
-    console.log('app is running  on port 3001')
+app.listen(process.env.PORT || 3001,()=>{
+    console.log('app is running ')
 })
 
