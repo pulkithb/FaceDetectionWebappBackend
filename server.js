@@ -11,10 +11,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED=0
 const db = knex({
 	client: 'pg',
 	connection:{
-		host: 'postgresql-pointy-78396',
-		user: 'postgres',
-		password: 'test',
-		database: 'postgres'
+		host: process.env.DATABASE_URL,
+		ssl: true
 	}
 }); 
 const app = express();
